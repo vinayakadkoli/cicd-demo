@@ -1,6 +1,6 @@
 {
 	"currencyApi": {
-		"domain": "demo-test.apigee.net",
+		"domain": "vinayakadkoli-eval-test.apigee.net",
 		"basepath": "/currency/v1"
 	}
 }
