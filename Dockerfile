@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.138.4
+FROM jenkins/jenkins:lts
 
 # install jenkins plugins
 COPY --chown=jenkins:jenkins ./docker/jenkins/plugins /usr/share/jenkins/plugins
@@ -24,7 +24,7 @@ USER root
 # this will be directory where we keep ssh keys for git authentication
 RUN mkdir /usr/share/jenkins/ssh
 # generate public/private keys for git authentication
-RUN ssh-keygen -t rsa -b 4096 -C "jenkins@apigee.com" -f /usr/share/jenkins/ssh/id_rsa -q -P ""
+RUN ssh-keygen -t rsa -b 4096 -C "vinayakadkoli@gmail.com" -f /usr/share/jenkins/ssh/id_rsa -q -P ""
 # you get "Host key verification failed" if you don't have known_hosts
 # file in place or if file is empty
 # add github to known_hosts
