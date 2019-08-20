@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:latest
+FROM jenkins/jenkins:lts
 
 # install jenkins plugins
 COPY --chown=jenkins:jenkins ./docker/jenkins/plugins /usr/share/jenkins/plugins
